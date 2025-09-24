@@ -4,24 +4,23 @@
   <meta charset="UTF-8">
   <title>Balloon</title>
   <style>
-    /* สไตล์ของ body */
+    /* CSS */
     body {
       margin: 0;
       height: 100vh;
-      background-color: #f0f0f0; /* เทาอ่อนสบายตา */
+      background-color: #f0f0f0;
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: sans-serif;
     }
 
-    /* บอลลูน */
     #balloon {
       width: 200px;
       height: 200px;
       background-color: red;
       border-radius: 50%;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เงานุ่มๆ */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       transition: all 0.3s ease-in-out;
     }
@@ -29,8 +28,10 @@
 </head>
 <body>
 
+  <!-- HTML -->
   <div id="balloon" title="Click to inflate, move out to deflate"></div>
 
+  <!-- JS -->
   <script>
     const balloon = document.getElementById('balloon');
 
@@ -68,3 +69,4 @@
 
 </body>
 </html>
+
