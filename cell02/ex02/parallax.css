@@ -1,0 +1,30 @@
+body, html {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.img1 {
+  background-image: url('https://cdn.pixabay.com/photo/2024/06/12/09/13/anime-8824852_1280.jpg');
+}
+
+.img2 {
+  background-image: url('https://cdn.pixabay.com/photo/2023/10/07/23/39/girl-8301168_1280.png');
+}
+
+.content {
+  background: black;
+  padding: 100px 0;
+}
