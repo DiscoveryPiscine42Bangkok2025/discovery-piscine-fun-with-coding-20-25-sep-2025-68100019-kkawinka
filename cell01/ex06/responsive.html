@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Table</title>
+<style>
+  /* ตั้งค่าให้ html, body และ table เต็มความสูง */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    width: 100vw;      /* เต็มความกว้าง viewport */
+    height: 100vh;     /* เต็มความสูง viewport */
+    border-collapse: collapse;
+    table-layout: fixed; /* ทำให้เซลล์มีความกว้างเท่ากัน */
+  }
+  td {
+    border: 1px solid black;
+    font-size: 2vw;      /* ขนาดตัวอักษรปรับตามขนาดหน้าจอ */
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    padding: 0;          /* ลบ padding เพื่อเต็มช่อง */
+    width: 50%;          /* ครึ่งหนึ่งของตาราง */
+    height: 100vh;       /* ให้เซลล์เต็มความสูง */
+  }
+  .first {
+    background-color: #87CEEB; /* sky blue */
+  }
+  .second {
+    background-color: #FFF8B0; /* light yellow */
+    color: #333;
+  }
+
+  /* สำหรับมือถือ ให้แสดงเป็นบล็อกซ้อนกัน */
+  @media (max-width: 600px) {
+    table, tbody, tr {
+      display: block;
+      width: 100vw;
+      height: auto;
+    }
+    td {
+      width: 100% !important;
+      height: 50vh; /* ครึ่งหนึ่งของ viewport สูง */
+      font-size: 4vw;
+    }
+  }
+</style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="first">Sky</td>
+      <td class="second">Lamon</td>
+    </tr>
+  </table>
+</body>
+</html>
