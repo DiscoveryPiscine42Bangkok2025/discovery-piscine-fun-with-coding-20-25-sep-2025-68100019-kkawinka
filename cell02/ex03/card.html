@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>User Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #eee;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; margin: 0;
+  }
+  .card {
+    background: #fff; padding: 20px; width: 260px; text-align: center;
+    border-radius: 10px; box-shadow: 0 0 8px #ccc;
+  }
+  img.profile {
+    width: 100px; border-radius: 50%; border: 2px solid #4a90e2;
+  }
+  .login { font-weight: bold; margin: 10px 0 5px; }
+  .desc { color: #666; font-size: 0.9em; margin-bottom: 15px; }
+  .social img {
+    width: 24px; margin: 0 5px; cursor: pointer;
+  }
+  button {
+    width: 100%; padding: 10px; background: #4a90e2;
+    border: none; border-radius: 20px; color: #fff; font-size: 1em;
+    cursor: pointer;
+  }
+  button:hover { background: #357ABD; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h2>User Profile</h2>
+    <img class="profile" src="https://pakmud.com/wp-content/uploads/2023/03/%E0%B8%A1%E0%B8%B5%E0%B8%A1%E0%B9%81%E0%B8%A1%E0%B8%A7-15.jpg" alt="Profile" />
+    <div class="login">john_doe</div>
+    <div class="desc">Web Developer</div>
+    <div class="social">
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" />
+      <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" />
+    </div>
+    <button>Contact</button>
+  </div>
+</body>
+</html>
