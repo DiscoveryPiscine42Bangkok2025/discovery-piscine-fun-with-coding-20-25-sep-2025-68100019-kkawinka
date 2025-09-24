@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
+    .calculator {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="calculator" onsubmit="calculate(event)">
+    <input type="text" id="left" placeholder="Left number">
+    
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    
+    <input type="text" id="right" placeholder="Right number">
+    
+    <input type="submit" value="Try me!">
+  </form>
+
+  <script>
+    function isPositiveInteger(value) {
+      const num = Number(value);
+      return Number.isInteger(num) && num >= 0;
+    }
+
+    function calculate(event) {
+      event.preventDefault(); // prevent form reload
+
+      const left = document.getElementById("left").value.trim();
+      const right = document.getElementById("right").value.trim();
+      const operator = document.getElementById("operator").value;
+
+      if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+        alert("Error :(");
+        return;
+      }
+
+      const numLeft = Number(left);
+      const numRight = Number(right);
+
+      // Division or modulo by zero
+      if ((operator === '/' || operator === '%') && numRight === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      let result;
+
+      switch (operator) {
+        case '+':
+          result = numLeft + numRight;
+          break;
+        case '-':
+          result = numLeft - numRight;
+          break;
+        case '*':
+          result = numLeft * numRight;
+          break;
+        case '/':
+          result = numLeft / numRight;
+          break;
+        case '%':
+          result = numLeft % numRight;
+          break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result:", result);
+    }
+
+    // Alert every 30 seconds
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+
+</body>
+</html>
