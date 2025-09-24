@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #ccc;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: none; /* ซ่อนเส้นตาราง */
+  padding: 5px;
+}
+
+.profile-pic {
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #4a90e2;
+}
+
+.login {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+.description {
+  color: #666;
+  font-size: 0.9em;
+  padding-bottom: 10px;
+}
+
+td img {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #357ABD;
+}
